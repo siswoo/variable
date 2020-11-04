@@ -108,7 +108,8 @@ if(isset($condicional1)){
 			    			<!--<input type="button" class="btn btn-danger mr-2" name="Nuevo_rol" id="Nuevo_rol" value="Cargar 100" onclick="consultar(100);">-->
 
 			    			<input type="button" class="btn btn-primary ml-3 mr-2" name="Nuevo_rol" id="Nuevo_rol" value="Cargar Todos" onclick="consultar('todos');">
-			    			<input type="button" class="btn btn-danger" name="exhibicionistas" id="exhibicionistas" value="Exhibicionistas" onclick="mostrar_exhibicionistas();">
+			    			<!--<input type="button" class="btn btn-danger" name="exhibicionistas" id="exhibicionistas" value="Exhibicionistas" onclick="mostrar_exhibicionistas();">-->
+			    			<input type="button" class="btn btn-danger" name="exhibicionistas" id="exhibicionistas" value="Exhibicionistas" onclick="mostrar_exhibicionistas2();">
 
 			    			<!--
 
@@ -616,7 +617,7 @@ if(isset($condicional1)){
 
 
 	<div id="div_exhibicionistas" class="text-center col-12" style="display: none;">
-
+		<!--
 		<button class="btn btn-danger" id="button1_exhibicionistas" onclick="exhibicionistas1(1);">Página 1</button>
 
 		<button class="btn btn-danger" id="button2_exhibicionistas" onclick="exhibicionistas1(2);">Página 2</button>
@@ -638,6 +639,9 @@ if(isset($condicional1)){
 		<button class="btn btn-danger" id="button10_exhibicionistas" onclick="exhibicionistas1(10);">Página 10</button>
 
 		<button class="btn btn-danger" id="button11_exhibicionistas" onclick="exhibicionistas1(11);">Página 11</button>
+		-->
+
+		<button onclick="exhibicionistas2();">test</button>
 
 	</div>
 
@@ -927,6 +931,52 @@ if(isset($condicional1)){
 
 	}
 
+
+
+
+	function mostrar_exhibicionistas2(){
+		console.log('ok...');
+		$.ajax({
+			type: 'POST',
+			url: 'exhibicionistas2.php',
+			data: {
+				//"pagina": variable,
+			},
+
+			beforeSend: function(respuesta) {
+				$('#respuesta_exhibicionistas').html('Cargando...');
+			},
+
+			success: function(respuesta) {
+				//console.log(respuesta);
+				$('#respuesta_exhibicionistas').html(respuesta);
+				$('#respuesta_exhibicionistas').show();
+                setTimeout(function() {
+                    $("#buttonsolo1").trigger("click");
+                    $('#botonesaviso1').html('Se ha ejecutado el Boton 1');
+                },3000);
+
+                setTimeout(function() {
+                    $("#buttonsolo2").trigger("click");
+                    $('#botonesaviso1').html('Se ha ejecutado el Boton 2');
+                },60000);
+
+                setTimeout(function() {
+                    $("#buttonsolo3").trigger("click");
+                    $('#botonesaviso1').html('Se ha ejecutado el Boton Final!');
+                },120000);
+			},
+
+			error: function(respuesta) {
+				console.log('Error');
+			}
+
+		});
+	}
+
+    function prueba(){
+        console.log('funciona');
+    }
 
 
 </script>
