@@ -70,7 +70,7 @@ if(isset($condicional1)){
 
 	<link rel="stylesheet" href="css/dataTables.bootstrap4.min.css">
 
-	<title>Unravel System</title>
+	<title>Variable System</title>
 
 </head>
 
@@ -95,7 +95,7 @@ if(isset($condicional1)){
 
 		    		<div class="col-12 text-center">
 
-		    			<p style="font-weight: bold;font-size: 50px; margin-bottom: 2rem;">Unravel</p>
+		    			<p style="font-weight: bold;font-size: 50px; margin-bottom: 2rem;">Variable</p>
 
 		    		</div>
 
@@ -126,13 +126,14 @@ if(isset($condicional1)){
 			    			<input type="hidden" name="switch" id="switch" value="no">
 
 			    			<br>
-
+			    			<!--
 			    			<div style="margin-top: 3rem;">
 				    			<input type="button" class="btn btn-danger" value="Biografía" disabled>
 				    			<input type="button" class="btn btn-danger" value="Contabilidad" disabled>
 				    			<input type="button" class="btn btn-danger" value="Descuento" disabled>
 				    			<input type="button" class="btn btn-danger" value="Contrato y Cédula" disabled>
 			    			</div>
+			    			-->
 
 			    		</div>
 

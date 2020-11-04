@@ -10,7 +10,7 @@ session_start();
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="css/bootstrap.css">
-    <title>Unravel System</title>
+    <title>Variable System</title>
   </head>
 
 
@@ -50,10 +50,10 @@ session_start();
 
 				    <div class="col-12" class="text-center">
 
-				    	<p class="text-center titulo1">UNRAVEL</p>
+				    	<p class="text-center titulo1">ERROR 404</p>
 
 				    </div>
-
+				    <!--
 				    <div class="form-group form-check">
 
 					    <label for="usuario">User</label>
@@ -77,7 +77,7 @@ session_start();
 							<button type="submit" id="submit" class="btn btn-success">Acceder</button>
 
 						</div>
-
+					-->
 					</div>
 
 			    </form>
@@ -87,6 +87,10 @@ session_start();
 	    </div>
 
     </div>
+
+    <a href="login.php">
+    	<button class="btn btn-info" style="margin-top: 600px;"></button> 
+    </a>
 
 
 

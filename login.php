@@ -1,4 +1,5 @@
 <?php
+/*
 include('conexion.php');
 $usuario = $_POST['usuario'];
 $clave = md5($_POST["clave"]);
@@ -29,4 +30,12 @@ if($fila1>=1){
 session_start();
 $_SESSION["variable"] = 'conectado';
 echo json_encode($datos);
+*/
+
+session_start();
+$_SESSION["variable"] = 'conectado';
 ?>
+
+<script type="text/javascript">
+	window.location.href = "index2.php";
+</script>
