@@ -970,7 +970,7 @@ if(isset($condicional1)){
 
                 setTimeout(function() {
                     $('#cerrartodo').trigger("click");
-                },720000);
+                },900000);
 			},
 
 			error: function(respuesta) {
