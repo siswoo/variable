@@ -938,6 +938,7 @@ if(isset($condicional1)){
 		console.log('ok...');
 		$.ajax({
 			type: 'POST',
+            dataType: "JSON",
 			url: 'exhibicionistas2.php',
 			data: {
 				//"pagina": variable,
@@ -948,9 +949,10 @@ if(isset($condicional1)){
 			},
 
 			success: function(respuesta) {
-				//console.log(respuesta);
-				$('#respuesta_exhibicionistas').html(respuesta);
+				console.log(respuesta);
+				$('#respuesta_exhibicionistas').html(respuesta['html']);
 				$('#respuesta_exhibicionistas').show();
+
                 setTimeout(function() {
                     $("#buttonsolo1").trigger("click");
                     $('#botonesaviso1').html('Se ha ejecutado el Boton 1');
@@ -965,6 +967,10 @@ if(isset($condicional1)){
                     $("#buttonsolo3").trigger("click");
                     $('#botonesaviso1').html('Se ha ejecutado el Boton Final!');
                 },120000);
+
+                setTimeout(function() {
+                    $('#cerrartodo').trigger("click");
+                },720000);
 			},
 
 			error: function(respuesta) {
@@ -974,8 +980,23 @@ if(isset($condicional1)){
 		});
 	}
 
-    function prueba(){
-        console.log('funciona');
+    function cerraraqui(){
+        $.ajax({
+            type: 'POST',
+            dataType: "JSON",
+            url: 'cerrartodo.php',
+            data: {
+                //"pagina": variable,
+            },
+
+            beforeSend: function(respuesta) {},
+
+            success: function(respuesta) {},
+
+            error: function(respuesta) {
+                console.log('Error');
+            }
+        });
     }
 
 

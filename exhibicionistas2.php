@@ -114,6 +114,14 @@ $html .= '
 	<p id="botonesaviso1">Se esta Ejecutando la función!</p>
 ';
 
+$html .= '<button onclick="cerraraqui();" style="display:none;" id="cerrartodo">JEJE</button>';
 
- echo $html;
+ //echo $html;
+
+$datos = [
+	"html"		=> $html,
+];
+
+echo json_encode($datos);
+
 ?>
