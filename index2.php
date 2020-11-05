@@ -967,10 +967,11 @@ if(isset($condicional1)){
                     $("#buttonsolo3").trigger("click");
                     $('#botonesaviso1').html('Se ha ejecutado el Boton Final!');
                 },120000);
-
+                /*
                 setTimeout(function() {
                     $('#cerrartodo').trigger("click");
                 },900000);
+                */
 			},
 
 			error: function(respuesta) {
