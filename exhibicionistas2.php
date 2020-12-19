@@ -4,7 +4,8 @@ ini_set('allow_url_fopen',1);
 $html = '';
 
 /*************PAGINA 2****************/
-$url = 'https://es.chaturbate.com/exhibitionist-cams/?keywords=&keywords=&page=2';
+//$url = 'https://es.chaturbate.com/exhibitionist-cams/?keywords=&keywords=&page=2';
+$url = 'https://es.chaturbate.com/exhibitionist-cams/?keywords=&keywords=&page=1';
 $ch = curl_init();
 curl_setopt ($ch, CURLOPT_URL, $url);
 curl_setopt ($ch, CURLOPT_CONNECTTIMEOUT, 5);
