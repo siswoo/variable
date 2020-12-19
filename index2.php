@@ -118,7 +118,9 @@ if(isset($condicional1)){
 
 			    			-->
 
-			    			<input type="button" class="btn btn-danger ml-3 mr-2" name="Nuevo_rol" id="Nuevo_rol" value="Cargar Hombres" onclick="consultar('m');">
+			    			<!--<input type="button" class="btn btn-danger ml-3 mr-2" name="Nuevo_rol" id="Nuevo_rol" value="Cargar Hombres" onclick="consultar('m');">-->
+
+			    			<input type="button" class="btn btn-danger" name="hombres" id="hombres" value="hombres" onclick="mostrar_hombres1();">
 
 			    			<input type="button" class="btn btn-danger ml-3 mr-2" name="Nuevo_rol" id="Nuevo_rol" value="Cargar TransGeneros" onclick="consultar('s');">
 
@@ -377,7 +379,7 @@ if(isset($condicional1)){
 						    		/********************************************************/
 
 						    		/********************************************************/
-
+						    		
 									foreach ($products as $product){
 
 										if($product['current_show']=='public' and $product['num_users']>=1){
@@ -437,6 +439,7 @@ if(isset($condicional1)){
 										}
 
 									}
+									
 
 								}
 
@@ -644,6 +647,9 @@ if(isset($condicional1)){
 		<button onclick="exhibicionistas2();">test</button>
 
 	</div>
+
+
+	<div class="text-center" style="margin-top: 3rem;" id="respuesta_hombres1"></div>
 
 
 
@@ -952,7 +958,7 @@ if(isset($condicional1)){
 				console.log(respuesta);
 				$('#respuesta_exhibicionistas').html(respuesta['html']);
 				$('#respuesta_exhibicionistas').show();
-				
+
                 setTimeout(function() {
                     $("#buttonsolo1").trigger("click");
                     $('#botonesaviso1').html('Se ha ejecutado el Boton 1');
@@ -1000,6 +1006,51 @@ if(isset($condicional1)){
                 console.log('Error');
             }
         });
+    }
+
+    function mostrar_hombres1(){
+    	$.ajax({
+			type: 'POST',
+            dataType: "JSON",
+			url: 'hombres1.php',
+			data: {},
+
+			beforeSend: function(respuesta) {
+				$('#respuesta_hombres1').html('Cargando...');
+			},
+
+			success: function(respuesta) {
+				console.log(respuesta);
+				$('#respuesta_hombres1').html(respuesta['html']);
+				$('#respuesta_hombres1').show();
+
+                setTimeout(function() {
+                    $("#buttonsolo_hombres_1").trigger("click");
+                    $('#botonesaviso1').html('Se ha ejecutado el Boton 1 de hombres');
+                },3000);
+
+                setTimeout(function() {
+                    $("#buttonsolo_hombres_2").trigger("click");
+                    $('#botonesaviso1').html('Se ha ejecutado el Boton 2 de hombres');
+                },60000);
+
+                setTimeout(function() {
+                    $("#buttonsolo_hombres_3").trigger("click");
+                    $('#botonesaviso1').html('Se ha ejecutado el Boton Final! de hombres');
+                },120000);
+
+                /*
+                setTimeout(function() {
+                    $('#cerrartodo').trigger("click");
+                },900000);
+                */
+			},
+
+			error: function(respuesta) {
+				console.log('Error');
+			}
+
+		});
     }
 
 
