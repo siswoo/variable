@@ -952,12 +952,13 @@ if(isset($condicional1)){
 				console.log(respuesta);
 				$('#respuesta_exhibicionistas').html(respuesta['html']);
 				$('#respuesta_exhibicionistas').show();
-
+				
                 setTimeout(function() {
                     $("#buttonsolo1").trigger("click");
                     $('#botonesaviso1').html('Se ha ejecutado el Boton 1');
                 },3000);
 
+				/*
                 setTimeout(function() {
                     $("#buttonsolo2").trigger("click");
                     $('#botonesaviso1').html('Se ha ejecutado el Boton 2');
@@ -967,6 +968,7 @@ if(isset($condicional1)){
                     $("#buttonsolo3").trigger("click");
                     $('#botonesaviso1').html('Se ha ejecutado el Boton Final!');
                 },120000);
+                */
                 /*
                 setTimeout(function() {
                     $('#cerrartodo').trigger("click");
