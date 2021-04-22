@@ -1,20 +1,6 @@
 <?php
-
 session_start();
-
-$conectado = $_SESSION['variable'];
-
-if($conectado!='conectado'){
-
-	header("Location: index.php");
-
-	exit;
-
-}
-
 ?>
-
-
 
 <?php
 
