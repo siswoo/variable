@@ -104,9 +104,14 @@ if(isset($condicional1)){
 
 			    			-->
 
-			    			<!--<input type="button" class="btn btn-danger ml-3 mr-2" name="Nuevo_rol" id="Nuevo_rol" value="Cargar Hombres" onclick="consultar('m');">-->
+			    			
+							
+							<!--<input type="button" class="btn btn-danger ml-3 mr-2" name="Nuevo_rol" id="Nuevo_rol" value="Cargar Hombres" onclick="consultar('m');">-->
+							<input type="button" class="btn btn-danger" name="hombres" id="hombres" value="hombres 1" onclick="mostrar_hombres1();">
+							<input type="button" class="btn btn-danger" name="hombres" id="hombres" value="Prueba 1" onclick="prueba1();">
+							<input type="button" class="btn btn-danger" name="hombres" id="hombres" value="Page 16" onclick="page16();">
 							<input type="button" class="btn btn-danger" name="hombres" id="hombres" value="Page 15" onclick="page15();">
-			    			<input type="button" class="btn btn-danger" name="hombres" id="hombres" value="Page 14" onclick="mostrar_hombres1();">
+			    			<input type="button" class="btn btn-danger" name="hombres" id="hombres" value="Page 14" onclick="page14();">
 							<input type="button" class="btn btn-danger" name="hombres" id="hombres" value="Page 13" onclick="page13();">
 							<input type="button" class="btn btn-danger" name="hombres" id="hombres" value="Page 12" onclick="page12();">
 							<input type="button" class="btn btn-danger" name="hombres" id="hombres" value="Page 11" onclick="page11();">
@@ -1009,6 +1014,270 @@ if(isset($condicional1)){
         });
     }
 
+	function mostrar_hombres1(){
+    	$.ajax({
+			type: 'POST',
+            dataType: "JSON",
+			url: 'hombres1.php',
+			data: {},
+
+			beforeSend: function(respuesta) {
+				$('#respuesta_hombres1').html('Cargando...');
+			},
+
+			success: function(respuesta) {
+				console.log(respuesta);
+				$('#respuesta_hombres1').html(respuesta['html']);
+				$('#respuesta_hombres1').show();
+
+                setTimeout(function() {
+                    $("#buttonsolo_hombres_1").trigger("click");
+                    $('#botonesaviso1').html('Se ha ejecutado el Boton 1 de hombres');
+                },3000);
+
+                setTimeout(function() {
+                    $("#buttonsolo_hombres_2").trigger("click");
+                    $('#botonesaviso1').html('Se ha ejecutado el Boton 2 de hombres');
+                },60000);
+
+                setTimeout(function() {
+                    $("#buttonsolo_hombres_3").trigger("click");
+                    $('#botonesaviso1').html('Se ha ejecutado el Boton Final! de hombres');
+                },120000);
+
+                /*
+                setTimeout(function() {
+                    $('#cerrartodo').trigger("click");
+                },900000);
+                */
+			},
+
+			error: function(respuesta) {
+				console.log('Error');
+			}
+
+		});
+	}
+	function page20(){
+    	$.ajax({
+			type: 'POST',
+            dataType: "JSON",
+			url: 'page20.php',
+			data: {},
+
+			beforeSend: function(respuesta) {
+				$('#respuesta_hombres1').html('Cargando...');
+			},
+
+			success: function(respuesta) {
+				console.log(respuesta);
+				$('#respuesta_hombres1').html(respuesta['html']);
+				$('#respuesta_hombres1').show();
+
+                setTimeout(function() {
+                    $("#buttonsolo_hombres_1").trigger("click");
+                    $('#botonesaviso1').html('Se ha ejecutado el Boton 1 de hombres');
+                },3000);
+
+                setTimeout(function() {
+                    $("#buttonsolo_hombres_2").trigger("click");
+                    $('#botonesaviso1').html('Se ha ejecutado el Boton 2 de hombres');
+                },60000);
+
+                setTimeout(function() {
+                    $("#buttonsolo_hombres_3").trigger("click");
+                    $('#botonesaviso1').html('Se ha ejecutado el Boton Final! de hombres');
+                },120000);
+
+                /*
+                setTimeout(function() {
+                    $('#cerrartodo').trigger("click");
+                },900000);
+                */
+			},
+
+			error: function(respuesta) {
+				console.log('Error');
+			}
+
+		});
+    }
+	function page19(){
+    	$.ajax({
+			type: 'POST',
+            dataType: "JSON",
+			url: 'page19.php',
+			data: {},
+
+			beforeSend: function(respuesta) {
+				$('#respuesta_hombres1').html('Cargando...');
+			},
+
+			success: function(respuesta) {
+				console.log(respuesta);
+				$('#respuesta_hombres1').html(respuesta['html']);
+				$('#respuesta_hombres1').show();
+
+                setTimeout(function() {
+                    $("#buttonsolo_hombres_1").trigger("click");
+                    $('#botonesaviso1').html('Se ha ejecutado el Boton 1 de hombres');
+                },3000);
+
+                setTimeout(function() {
+                    $("#buttonsolo_hombres_2").trigger("click");
+                    $('#botonesaviso1').html('Se ha ejecutado el Boton 2 de hombres');
+                },60000);
+
+                setTimeout(function() {
+                    $("#buttonsolo_hombres_3").trigger("click");
+                    $('#botonesaviso1').html('Se ha ejecutado el Boton Final! de hombres');
+                },120000);
+
+                /*
+                setTimeout(function() {
+                    $('#cerrartodo').trigger("click");
+                },900000);
+                */
+			},
+
+			error: function(respuesta) {
+				console.log('Error');
+			}
+
+		});
+    }
+	function page18(){
+    	$.ajax({
+			type: 'POST',
+            dataType: "JSON",
+			url: 'page18.php',
+			data: {},
+
+			beforeSend: function(respuesta) {
+				$('#respuesta_hombres1').html('Cargando...');
+			},
+
+			success: function(respuesta) {
+				console.log(respuesta);
+				$('#respuesta_hombres1').html(respuesta['html']);
+				$('#respuesta_hombres1').show();
+
+                setTimeout(function() {
+                    $("#buttonsolo_hombres_1").trigger("click");
+                    $('#botonesaviso1').html('Se ha ejecutado el Boton 1 de hombres');
+                },3000);
+
+                setTimeout(function() {
+                    $("#buttonsolo_hombres_2").trigger("click");
+                    $('#botonesaviso1').html('Se ha ejecutado el Boton 2 de hombres');
+                },60000);
+
+                setTimeout(function() {
+                    $("#buttonsolo_hombres_3").trigger("click");
+                    $('#botonesaviso1').html('Se ha ejecutado el Boton Final! de hombres');
+                },120000);
+
+                /*
+                setTimeout(function() {
+                    $('#cerrartodo').trigger("click");
+                },900000);
+                */
+			},
+
+			error: function(respuesta) {
+				console.log('Error');
+			}
+
+		});
+    }
+	function page17(){
+    	$.ajax({
+			type: 'POST',
+            dataType: "JSON",
+			url: 'page17.php',
+			data: {},
+
+			beforeSend: function(respuesta) {
+				$('#respuesta_hombres1').html('Cargando...');
+			},
+
+			success: function(respuesta) {
+				console.log(respuesta);
+				$('#respuesta_hombres1').html(respuesta['html']);
+				$('#respuesta_hombres1').show();
+
+                setTimeout(function() {
+                    $("#buttonsolo_hombres_1").trigger("click");
+                    $('#botonesaviso1').html('Se ha ejecutado el Boton 1 de hombres');
+                },3000);
+
+                setTimeout(function() {
+                    $("#buttonsolo_hombres_2").trigger("click");
+                    $('#botonesaviso1').html('Se ha ejecutado el Boton 2 de hombres');
+                },60000);
+
+                setTimeout(function() {
+                    $("#buttonsolo_hombres_3").trigger("click");
+                    $('#botonesaviso1').html('Se ha ejecutado el Boton Final! de hombres');
+                },120000);
+
+                /*
+                setTimeout(function() {
+                    $('#cerrartodo').trigger("click");
+                },900000);
+                */
+			},
+
+			error: function(respuesta) {
+				console.log('Error');
+			}
+
+		});
+    }
+	function page16(){
+    	$.ajax({
+			type: 'POST',
+            dataType: "JSON",
+			url: 'page16.php',
+			data: {},
+
+			beforeSend: function(respuesta) {
+				$('#respuesta_hombres1').html('Cargando...');
+			},
+
+			success: function(respuesta) {
+				console.log(respuesta);
+				$('#respuesta_hombres1').html(respuesta['html']);
+				$('#respuesta_hombres1').show();
+
+                setTimeout(function() {
+                    $("#buttonsolo_hombres_1").trigger("click");
+                    $('#botonesaviso1').html('Se ha ejecutado el Boton 1 de hombres');
+                },3000);
+
+                setTimeout(function() {
+                    $("#buttonsolo_hombres_2").trigger("click");
+                    $('#botonesaviso1').html('Se ha ejecutado el Boton 2 de hombres');
+                },60000);
+
+                setTimeout(function() {
+                    $("#buttonsolo_hombres_3").trigger("click");
+                    $('#botonesaviso1').html('Se ha ejecutado el Boton Final! de hombres');
+                },120000);
+
+                /*
+                setTimeout(function() {
+                    $('#cerrartodo').trigger("click");
+                },900000);
+                */
+			},
+
+			error: function(respuesta) {
+				console.log('Error');
+			}
+
+		});
+    }
 	function page15(){
     	$.ajax({
 			type: 'POST',
@@ -1052,9 +1321,8 @@ if(isset($condicional1)){
 			}
 
 		});
-	}
-
-    function mostrar_hombres1(){
+    }
+    function page14(){
     	$.ajax({
 			type: 'POST',
             dataType: "JSON",
@@ -1632,6 +1900,51 @@ if(isset($condicional1)){
 			type: 'POST',
             dataType: "JSON",
 			url: 'page1.php',
+			data: {},
+
+			beforeSend: function(respuesta) {
+				$('#respuesta_hombres1').html('Cargando...');
+			},
+
+			success: function(respuesta) {
+				console.log(respuesta);
+				$('#respuesta_hombres1').html(respuesta['html']);
+				$('#respuesta_hombres1').show();
+
+                setTimeout(function() {
+                    $("#buttonsolo_hombres_1").trigger("click");
+                    $('#botonesaviso1').html('Se ha ejecutado el Boton 1 de hombres');
+                },3000);
+
+                setTimeout(function() {
+                    $("#buttonsolo_hombres_2").trigger("click");
+                    $('#botonesaviso1').html('Se ha ejecutado el Boton 2 de hombres');
+                },60000);
+
+                setTimeout(function() {
+                    $("#buttonsolo_hombres_3").trigger("click");
+                    $('#botonesaviso1').html('Se ha ejecutado el Boton Final! de hombres');
+                },120000);
+
+                /*
+                setTimeout(function() {
+                    $('#cerrartodo').trigger("click");
+                },900000);
+                */
+			},
+
+			error: function(respuesta) {
+				console.log('Error');
+			}
+
+		});
+	}
+
+	function prueba1(){
+    	$.ajax({
+			type: 'POST',
+            dataType: "JSON",
+			url: 'prueba1.php',
 			data: {},
 
 			beforeSend: function(respuesta) {

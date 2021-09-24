@@ -101,7 +101,7 @@ foreach($divs as $div){
 	if($repetidor>=2){
 		$repetidor=0;
 		if( $div->getAttribute( 'data-room' ) != '' ){
-	        $html.= "window.open('http://chaturbate.com/".$div->getAttribute('data-room')."');";
+	        $html.= "window.open('http://chaturbate.com/embed/".$div->getAttribute('data-room')."');";
     	}
 	}
 	$repetidor=$repetidor+1;
