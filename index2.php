@@ -1,8 +1,16 @@
 <?php
-session_start();
-@include("session.php");
-?>
+@session_start();
+if(@$_SESSION['variable1_id']==''){?>
+	<script type="text/javascript">
+		window.location.href = "index.php";
+	</script>
+<?php }
 
+if(@$_SESSION['variable1_permisos']!='0'){?>
+	<script type="text/javascript">
+		window.location.href = "index.php";
+	</script>
+<?php } ?>
 <?php
 
 @$condicional1 = $_GET['cond1'];
