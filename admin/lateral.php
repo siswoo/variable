@@ -18,6 +18,7 @@
 		<ul class="nav menu">
 			<li class="<?php if($location=='index'){ echo 'active'; } ?>"><a href="index.php"><em class="fa fa-dashboard">&nbsp;</em> Bienvenido</a></li>
 			<li class="<?php if($location=='usuarios'){ echo 'active'; } ?>"><a href="usuarios.php"><em class="fa fa-calendar">&nbsp;</em> Usuarios</a></li>
+			<li class="<?php if($location=='categorias'){ echo 'active'; } ?>"><a href="categorias.php"><em class="fa fa-calendar">&nbsp;</em> Categorias</a></li>
 			<!--
 			<li><a href="charts.html"><em class="fa fa-bar-chart">&nbsp;</em> Charts</a></li>
 			<li><a href="elements.html"><em class="fa fa-toggle-off">&nbsp;</em> UI Elements</a></li>
