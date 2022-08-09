@@ -17,6 +17,15 @@ if($condicion=='login1'){
 		while($row1 = mysqli_fetch_array($proceso1)) {
 			$id = $row1["id"];
 			$permisos = $row1["permisos"];
+			$estatus = $row1["estatus"];
+		}
+
+		if($estatus!=1){
+			$datos = [
+				"estatus"	=> "error",
+				"msg"		=> "Su usuario esta desactivado",
+			];
+			echo json_encode($datos);
 		}
 
 		$_SESSION['variable1_id'] = $id;

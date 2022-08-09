@@ -145,7 +145,7 @@ if(@$_SESSION['variable1_permisos']!='0'){?>
 				},
 
 				error: function(respuesta) {
-					console.log(respuesta);
+					console.log(respuesta["responseText"]);
 				}
 			});
 		}else if(id=='paginas1'){
